@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Theme } from "./models";
+import { Subscription } from "rxjs";
+
+import { Component, OnInit, OnDestroy } from "@angular/core";
+
+import { ThemeService } from "./services";
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: "app-root",
+  templateUrl: "./app.component.html"
 })
-export class AppComponent  {
-  name = 'Angular';
+export class AppComponent implements OnInit, OnDestroy {
+  private themeSub: Subscription;
+
+  themeClass = "default";
+
+  constructor(public theme: ThemeService) {}
+
+  ngOnInit() {
+    this.themeSub = this.theme.theme$.subscribe(
+      (t: Theme) => (this.themeClass = t.name)
+    );
+  }
+
+  ngOnDestroy() {
+    this.themeSub && this.themeSub.unsubscribe();
+  }
 }
