@@ -21,8 +21,8 @@ export function loggerCallback(logLevel, message, piiEnabled) {
 
 export const protectedResourceMap: [string, string[]][] = [
   [
-    "https://ss1uy.sse.codesandbox.io",
-    ["https://TeamWiz.onmicrosoft.com/app/demo.read"]
+    "https://98h5l.sse.codesandbox.io",
+    ["https://TeamWiz.onmicrosoft.com/api/demo.read"]
   ]
   // [
   //   "https://graph.microsoft.com/v1.0/me",
@@ -48,16 +48,16 @@ export const protectedResourceMap: [string, string[]][] = [
       redirectUri: "https://angular-b2c.stackblitz.io",
       validateAuthority: true,
       cacheLocation: "localStorage",
-      postLogoutRedirectUri: "https://angular-b2c.stackblitz.io/",
+      postLogoutRedirectUri: "https://angular-b2c.stackblitz.io",
       navigateToLoginRequestUrl: true,
       popUp: true,
       consentScopes: [
         // "https://TeamWiz.onmicrosoft.com/app/user.read",
-        "https://TeamWiz.onmicrosoft.com/app/demo.read"
+        "demo.read"
       ],
       unprotectedResources: [
         "https://angular.io/"
-        // "https://ss1uy.sse.codesandbox.io/"
+        // "https://98h5l.sse.codesandbox.io/"
       ],
       protectedResourceMap: protectedResourceMap,
       logger: loggerCallback,

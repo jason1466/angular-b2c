@@ -17,7 +17,7 @@ export class GraphqlService {
   constructor(private apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
       link: httpLink.create({
-        uri: "https://ss1uy.sse.codesandbox.io/graphql"
+        uri: "https://98h5l.sse.codesandbox.io/graphql"
       }),
       cache: new InMemoryCache()
     });
