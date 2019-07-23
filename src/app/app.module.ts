@@ -21,7 +21,7 @@ export function loggerCallback(logLevel, message, piiEnabled) {
 
 export const protectedResourceMap: [string, string[]][] = [
   [
-    "https://98h5l.sse.codesandbox.io",
+    "https://jf2rc.sse.codesandbox.io/graphql",
     ["https://TeamWiz.onmicrosoft.com/api/demo.read"]
   ]
   // [
@@ -53,7 +53,7 @@ export const protectedResourceMap: [string, string[]][] = [
       popUp: true,
       consentScopes: [
         // "https://TeamWiz.onmicrosoft.com/app/user.read",
-        "demo.read"
+        "https://TeamWiz.onmicrosoft.com/api/demo.read"
       ],
       unprotectedResources: [
         "https://angular.io/"
