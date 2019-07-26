@@ -42,7 +42,7 @@ export const protectedResourceMap: [string, string[]][] = [
     ServicesModule,
     RouterModule.forRoot(Routes),
     MsalModule.forRoot({
-      clientID: "7ee72502-ef01-4d2a-a7c3-c6b201beb934",
+      clientID: "88567dbd-25f5-4652-bc27-d0718a269ad5",
       authority:
         "https://login.microsoftonline.com/tfp/TeamWiz.onmicrosoft.com/B2C_1_signupsignin1",
       redirectUri: "https://angular-b2c.stackblitz.io",

@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getRecipes();
+    // this.getRecipes();
 
     this.broadcastService.subscribe("msal:loginFailure", payload => {
       console.log("login failure " + JSON.stringify(payload));
