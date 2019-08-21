@@ -16,7 +16,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { LogLevel } from "msal";
 
 export function loggerCallback(logLevel, message, piiEnabled) {
-  console.log("client logging" + message);
+  console.log("client logging: " + message);
 }
 
 export const protectedResourceMap: [string, string[]][] = [
@@ -25,7 +25,7 @@ export const protectedResourceMap: [string, string[]][] = [
     ["https://TeamWiz.onmicrosoft.com/api/demo.read"]
   ]
   // [
-  //   "https://graph.microsoft.com/v1.0/me",
+  //   "https://graph.microsoft.com/v1.0/me", 
   //   ["https://TeamWiz.onmicrosoft.com/app/user.read"]
   // ]
 ];
@@ -48,9 +48,9 @@ export const protectedResourceMap: [string, string[]][] = [
       redirectUri: "https://angular-b2c.stackblitz.io",
       validateAuthority: true,
       cacheLocation: "localStorage",
-      postLogoutRedirectUri: "https://angular-b2c.stackblitz.io",
+      // postLogoutRedirectUri: "https://angular-b2c.stackblitz.io",
       navigateToLoginRequestUrl: true,
-      popUp: true,
+      popUp: false,
       consentScopes: [
         // "https://TeamWiz.onmicrosoft.com/app/user.read",
         "https://TeamWiz.onmicrosoft.com/api/demo.read"
@@ -62,8 +62,8 @@ export const protectedResourceMap: [string, string[]][] = [
       protectedResourceMap: protectedResourceMap,
       logger: loggerCallback,
       correlationId: "1234",
-      level: LogLevel.Verbose,
-      piiLoggingEnabled: true
+      level: LogLevel.Error,
+      piiLoggingEnabled: false
     })
   ],
   declarations: [
