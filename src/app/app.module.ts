@@ -21,7 +21,7 @@ export function loggerCallback(logLevel, message, piiEnabled) {
 
 export const protectedResourceMap: [string, string[]][] = [
   [
-    "https://jf2rc.sse.codesandbox.io/graphql",
+    "https://kk2go.sse.codesandbox.io/graphql",
     ["https://TeamWiz.onmicrosoft.com/api/demo.read"]
   ]
   // [
