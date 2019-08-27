@@ -76,8 +76,8 @@ export class HomeComponent implements OnInit {
 
   login() {
     this.authService.loginRedirect([
-      // "https://TeamWiz.onmicrosoft.com/app/user.read",
-      "https://TeamWiz.onmicrosoft.com/app/demo.read"
+      // "https://TeamWiz.onmicrosoft.com/api/user.read",
+      "https://TeamWiz.onmicrosoft.com/api/demo.read"
     ]);
   }
 

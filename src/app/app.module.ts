@@ -26,7 +26,7 @@ export const protectedResourceMap: [string, string[]][] = [
   ]
   // [
   //   "https://graph.microsoft.com/v1.0/me", 
-  //   ["https://TeamWiz.onmicrosoft.com/app/user.read"]
+  //   ["https://TeamWiz.onmicrosoft.com/api/user.read"]
   // ]
 ];
 
@@ -52,7 +52,7 @@ export const protectedResourceMap: [string, string[]][] = [
       navigateToLoginRequestUrl: true,
       popUp: false,
       consentScopes: [
-        // "https://TeamWiz.onmicrosoft.com/app/user.read",
+        // "https://TeamWiz.onmicrosoft.com/api/user.read",
         "https://TeamWiz.onmicrosoft.com/api/demo.read"
       ],
       unprotectedResources: [
